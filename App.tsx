@@ -50,7 +50,7 @@ export default function App() {
   }, [state.todos]);
 
   return (
-    <AppContext.Provider value={{ ...state, xd: dispatch }}>
+    <AppContext.Provider value={{ ...state, dispatch }}>
       <PaperProvider>
         <Modal
           onDismiss={() => setModalVisibility(false)}
