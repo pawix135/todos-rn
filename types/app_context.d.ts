@@ -1,6 +1,6 @@
 interface AppState {
   todos: Todo[];
-  dispatch?: (value: AppReducerAction) => void;
+  xd?: (value: AppReducerAction) => void;
 }
 
 type AppReducerActionType =

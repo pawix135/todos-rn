@@ -30,8 +30,9 @@ const TodoListItem: React.FC<Props> = ({ todo }) => {
     >
       <Surface style={[styles.surface]}>
         <Text>{todo.text}</Text>
-        <Text style={styles.created}>{todo.created_at.toLocaleString()}</Text>
-        <Text style={styles.updated}>{todo.updated_at.toLocaleString()}</Text>
+        <Text style={styles.updated}>
+          Updated: {todo.updated_at.toLocaleString()}
+        </Text>
         {todo.done && <View style={styles.done}></View>}
       </Surface>
     </TouchableOpacity>

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { StyleSheet, View, ScrollView, FlatList } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import { AppContext } from "../context/AppContext";
 import * as Random from "expo-random";
@@ -11,7 +11,7 @@ const TodoInput = () => {
 
   const addTodo = () => {
     if (!todoText.trim() || todoText.trim() === "") return;
-    ctx.dispatch({
+    ctx.xd({
       type: "TODO/ADD",
       payload: {
         created_at: new Date(),

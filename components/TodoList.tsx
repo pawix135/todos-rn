@@ -1,4 +1,4 @@
-import { View, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import TodoListItem from "./TodoListItem";
 
 interface Props {
@@ -6,15 +6,11 @@ interface Props {
 }
 const TodoList: React.FC<Props> = ({ todos }) => {
   return (
-    <View>
-      <FlatList
-        keyExtractor={(item) => item.id}
-        data={todos}
-        renderItem={({ item, index }) => (
-          <TodoListItem key={index} todo={item} />
-        )}
-      />
-    </View>
+    <FlatList
+      keyExtractor={(item) => item.id}
+      data={todos}
+      renderItem={({ item, index }) => <TodoListItem key={index} todo={item} />}
+    />
   );
 };
 
